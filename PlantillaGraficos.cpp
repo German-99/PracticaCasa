@@ -50,6 +50,46 @@ void dibujaPoligono() {
 	glVertex3f(-0.7f, 0.0f, 0.0f);
 	glVertex3f(-0.9f, 0.0f, 0.0f);
 	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.9f, 0.1f, 0.1f);
+
+	glVertex3f(0.29f, -0.11f, 0.0f);
+	glVertex3f(0.61f, -0.11f, 0.0f);
+	glVertex3f(0.61f, 0.21f, 0.0f);
+	glVertex3f(0.29f, 0.21f, 0.0f);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.9f, 0.1f, 0.1f);
+
+	glVertex3f(0.3f, 0.1f, 0.0f);
+	glVertex3f(0.61f, -0.11f, 0.0f);
+	glVertex3f(0.61f, 0.21f, 0.0f);
+	glVertex3f(0.29f, 0.21f, 0.0f);
+	glEnd();
+
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.3f, 0.7f, 0.4f);
+
+	glVertex3f(0.3f, -0.1f, 0.0f);
+	glVertex3f(0.6f, -0.1f, 0.0f);
+	glVertex3f(0.6f, 0.2f, 0.0f);
+	glVertex3f(0.3f, 0.2f, 0.0f);
+	glEnd();
+
+	glEnd();
+}
+
+void dibujarLineasCasa() {
+	glBegin(GL_LINE_STRIP);
+	glColor3f(1.0f, 0.0f, 0.0f);
+
+	
+
+
+	glEnd();
 }
 
 
@@ -109,6 +149,7 @@ void dibujarTriangulos() {
 }
 void dibujar() {
 	dibujaPoligono();
+	dibujarLineasCasa();
  
 }
 
