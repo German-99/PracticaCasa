@@ -13,73 +13,43 @@
 
 using namespace std;
 
-void dibujaPoligono() {
-	glBegin(GL_POLYGON);
+void dibujacasa() {
+	void dibujar()
+	{
+		//Inicia la rutina con un modo de dibujo
+		glBegin(GL_POLYGON);
+		glColor3f(1.0f, 0.0f, 0.0f);
+		glVertex3f(-0.5f, 0.0f, 0.0f);
 
-	glColor3f(0.0f, 0.5f, 0.0f);
+		glColor3f(1.0f, 1.0f, 0.0f);
+		glVertex3f(0.0f, 0.5f, 0.0f);
 
-	glVertex3f(-1.0f, -0.6f, 0.0f);
-	glVertex3f(1.0f, -0.6f, 0.0f);
-	glVertex3f(1.0f, -1.0f, 0.0f);
-	glVertex3f(-1.0f, -1.0f, 0.0f);
-	glEnd();
+		glColor3f(1.0f, 1.0f, 0.0f);
+		glVertex3f(0.5f, 0.5f, 0.0f);
 
-	glBegin(GL_POLYGON);
-	glColor3f(0.5f, 0.5f, 0.0f);
+		glColor3f(0.0f, 0.0f, 1.0f);
+		glVertex3f(0.0f, 0.0f, -0.5f);
+		glEnd();
 
-	glVertex3f(-0.5f, -0.7f, 0.0f);
-	glVertex3f(0.7f, -0.7f, 0.0f);
-	glVertex3f(0.7f, 0.5f, 0.0f);
-	glVertex3f(-0.5f, 0.5f, 0.0f);
-	glEnd();
+		glBegin(GL_LINE_LOOP);
+		glColor3f(1.0f, 0.0f, 0.0f);
+		glVertex3f(-0.5f, 0.0f, 0.0f);
 
-	glBegin(GL_POLYGON);
-	glColor3f(0.5f, 0.5f, 0.5f);
+		glColor3f(0.0f, 1.0f, 0.0f);
+		glVertex3f(0.0f, 0.5f, 0.0f);
 
-	glVertex3f(-0.1f, -0.7f, 0.0f);
-	glVertex3f(0.3f, -0.7f, 0.0f);
-	glVertex3f(0.3f, -0.2f, 0.0f);
-	glVertex3f(-0.1f, -0.2f, 0.0f);
-	glEnd();
+		glColor3f(0.0f, 0.0f, 1.0f);
+		glVertex3f(0.0f, 0.0f, 0.5f);
+		glEnd();
 
-	glBegin(GL_POLYGON);
-	glColor3f(0.5f, 0.5f, 0.5f);
-
-	glVertex3f(-0.9f, -0.7f, 0.0f);
-	glVertex3f(-0.7f, -0.7f, 0.0f);
-	glVertex3f(-0.7f, 0.0f, 0.0f);
-	glVertex3f(-0.9f, 0.0f, 0.0f);
-	glEnd();
-
-	glBegin(GL_POLYGON);
-	glColor3f(0.9f, 0.1f, 0.1f);
-
-	glVertex3f(0.29f, -0.11f, 0.0f);
-	glVertex3f(0.61f, -0.11f, 0.0f);
-	glVertex3f(0.61f, 0.21f, 0.0f);
-	glVertex3f(0.29f, 0.21f, 0.0f);
-	glEnd();
-
-	glBegin(GL_POLYGON);
-	glColor3f(0.9f, 0.1f, 0.1f);
-
-	glVertex3f(0.3f, 0.1f, 0.0f);
-	glVertex3f(0.61f, -0.11f, 0.0f);
-	glVertex3f(0.61f, 0.21f, 0.0f);
-	glVertex3f(0.29f, 0.21f, 0.0f);
-	glEnd();
-
-
-	glBegin(GL_POLYGON);
-	glColor3f(0.3f, 0.7f, 0.4f);
-
-	glVertex3f(0.3f, -0.1f, 0.0f);
-	glVertex3f(0.6f, -0.1f, 0.0f);
-	glVertex3f(0.6f, 0.2f, 0.0f);
-	glVertex3f(0.3f, 0.2f, 0.0f);
-	glEnd();
-
-	glEnd();
+		glBegin(GL_POLYGON);
+		glColor3f(0.5f, 0.2f, 0.7f);
+		for (float i = 0; i < 360; i++)
+		{
+			glVertex3f(0.2 * cos(i) + 0.6, 0.2 * sin(i) + 0.7, 0.0f);
+		}
+		glEnd();
+	}
 }
 
 void dibujarLineasCasa() {
@@ -148,8 +118,7 @@ void dibujarTriangulos() {
 	glEnd();
 }
 void dibujar() {
-	dibujaPoligono();
-	dibujarLineasCasa();
+	¨dibujacasa();
  
 }
 
